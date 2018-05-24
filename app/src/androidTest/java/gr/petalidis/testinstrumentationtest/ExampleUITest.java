@@ -68,7 +68,9 @@ public class ExampleUITest {
         mDevice.findObject(new UiSelector()
                 .packageName(BASIC_SAMPLE_PACKAGE).resourceId(BASIC_SAMPLE_PACKAGE+":id/getButton")).click();
 
-            UiObject2 result = mDevice.findObject(By.res(BASIC_SAMPLE_PACKAGE, "BASIC_SAMPLE_PACKAGE+:id/outputTextView"));
+        //    UiObject2 result = mDevice.findObject(By.res(BASIC_SAMPLE_PACKAGE, ":id/outputTextView"));
+            UiObject result = mDevice.findObject(new UiSelector()
+                    .packageName(BASIC_SAMPLE_PACKAGE).resourceId("gr.petalidis.testinstrumentationtest:id/outputTextView"));
         assertEquals("This is news to me!", result.getText());
     }
     }
