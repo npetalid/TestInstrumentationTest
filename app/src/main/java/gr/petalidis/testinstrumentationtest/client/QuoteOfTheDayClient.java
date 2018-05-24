@@ -5,7 +5,7 @@ package gr.petalidis.testinstrumentationtest.client;
  */
 
 public class QuoteOfTheDayClient implements IQuoteOfTheDayClient {
-    private String quote = "";
+    private String quote = "This is news to me!";
 
     @Override
     public String getQuoteOfTheDayClient(String day) throws Exception {
